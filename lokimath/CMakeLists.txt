@@ -3,7 +3,7 @@ set(CMAKE_CXX_STANDARD 14)
 
 project(lokimath)
 
-set(src algs/mean.h)
+#set(src inc/lokialg/mean.h)
 
 add_library(lokimath INTERFACE)
-target_include_directories(lokimath INTERFACE algs/)
+target_include_directories(lokimath INTERFACE inc/)

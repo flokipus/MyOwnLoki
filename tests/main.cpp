@@ -2,12 +2,13 @@
 // Created by elrond on 11/1/19.
 //
 
-#include <mean.h>
 #include <cmath>
 #include <iostream>
 #include <vector>
 #include <numeric>
 #include <limits>
+
+#include <lokialg/mean.h>
 
 int main()
 {
@@ -15,9 +16,13 @@ int main()
     auto sec = v.begin();
     sec++;
 
-    double value = lokimath::mean<double>::calc(v.begin(), v.end());
+    double value1 = lokimath::mean_recursive<double>::calc(v.begin(), v.end());
+    double value2 = lokimath::mean_directly<double>::calc(v.begin(), v.end());
+
     double exact = 3.0;
-    double diff = abs(value - exact);
-    bool test_is_fine = (diff == 0.0);
+    double diff1 = abs(value1 - exact);
+    double diff2 = abs(value2 - exact);
+
+    bool test_is_fine = (diff1 < 0.00001) && (diff2 < 0.00001);
     std::cout << "lokimath::mean is fine: " << test_is_fine << std::endl;
 }
