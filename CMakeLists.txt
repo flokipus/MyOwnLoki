@@ -6,5 +6,7 @@ project(myownloki)
 
 
 add_subdirectory(singleton)
-
+add_subdirectory(lokimath)
 add_subdirectory(tests)
+
+

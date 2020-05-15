@@ -5,5 +5,5 @@ project(tests)
 
 set(src main.cpp)
 
-add_executable(test_singleton ${src})
-target_link_libraries(test_singleton myownsingleton)
+add_executable(test ${src})
+target_link_libraries(test lokimath)
