@@ -8,8 +8,9 @@
 #include<vector>
 
 /**********************
- * Как это использовать:
+ * Подсчет среднего арифметического для заданного диапозона.
  *
+ * Как это использовать:
  *      std::vector<int> v = {1,2,3,4,5};
  *      double mean = lokimath::mean<double>::calc(v.begin(), v.end());
  *      double mean2 = lokimath::mean_recursive<double>::calc(v.begin(), v.end());
